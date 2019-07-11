@@ -41,7 +41,7 @@ const serverHandle = (req, res) =>{
     req.path = url.split('?')[0]
 
     //解析query
-    req.query = querystring.parse(url.split('?')[0])
+    req.query = querystring.parse(url.split('?')[1])
 
     //处理post data
     getPostData(req).then(postData => {
